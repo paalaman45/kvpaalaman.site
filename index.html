@@ -14,10 +14,22 @@
     <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css" />
     <!-- Core theme CSS (includes Bootstrap)-->
     <link href="css/styles.css" rel="stylesheet" />
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <!--Monstserrat Font-->
     <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
     <style>
+        .tag {
+            position: absolute;
+            z-index: 1000;
+            padding: 5px;
+            color: white !important;
+            background-color: #dc3545;
+            font-size: 8px !important;
+            font-weight: 100;
+            right: 0px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
         .nopadding{
             padding: 0 !important;
         }
@@ -39,7 +51,8 @@
             background-color: #c15465 !important;
         }
         .bg-second{
-            background-color: #39a3a6 !important;
+            /* background-color: #39a3a6 !important; */
+            background-color: #39a3a675 !important;
         }
         .hovereffect {
             width: 100%;
@@ -58,7 +71,7 @@
             top: auto;
             bottom: 0;
             padding: 1em;
-            height: 4.75em;
+            height: 3.75em;
             color: #3c4a50;
             -webkit-transition: -webkit-transform 0.35s;
             transition: transform 0.35s;
@@ -85,6 +98,19 @@
             text-align: center;
             position: relative;
             font-size: 17px;
+            padding: 10px;
+            background: rgba(0, 0, 0, 0.6);
+            float: left;
+            margin: 0px;
+            display: inline-block;
+        }
+
+        .hovereffect h5 {
+            text-transform: uppercase;
+            color: #fff;
+            text-align: center;
+            position: relative;
+            font-size: 10px;
             padding: 10px;
             background: rgba(0, 0, 0, 0.6);
             float: left;
@@ -325,30 +351,110 @@
     <section class="pt-5 pb-5 bg-light" id="my-project">
         <div class="container mt-5">
             <h2 class="h3 mb-3 text-uppercase text-center">Projects</h2>
+            <div class="d-flex justify-content-center">
+                <div class="btn-group" role="group" aria-label="Basic example">
+                    <button id="wordpress" type="button" class="btn btn-primary" style="">WordPress</button>
+                    <button id="laravel" type="button" class="btn btn-primary">Laravel</button>
+                </div>
+            </div>
+            
         </div>
         <div class="project mt-5 container">
             <div class="row" style="margin: 0; padding: 0;">
-                <div class="col-sm-4">
+                <div class="col-sm-4 wordpress mb-3">
                     <div class="hovereffect shadow">
+                        <p class="tag">WordPress</p>
                         <img class="img-responsive" src="./assets/img/portfolio/Devifyverse.png" alt="" width="100%;">
                         <div class="overlay bg-second text-center">
-                            <h2><a href="http://devifyverse.site/" style="text-decoration: none;color: white;">Devifyverse</a></h2>
+                            <h5><a href="http://devifyverse.site/" style="text-decoration: none;color: white;">Devifyverse</a></h5>
                         </div>
                     </div>
                 </div>
-                <div class="col-sm-4">
+                <div class="col-sm-4 wordpress mb-3">
                     <div class="hovereffect shadow">
+                        <p class="tag">WordPress</p>
                         <img class="img-responsive" src="./assets/img/portfolio/dld.png" alt="" width="100%;">
                         <div class="overlay bg-second text-center">
-                            <h2><a href="http://devifyverse.site/" style="text-decoration: none;color: white;">Dumaguete Logistic Dispatcher</a></h2>
+                            <h5><a href="http://devifyverse.site/" style="text-decoration: none;color: white;">Dumaguete Logistic Dispatcher</a></h5>
                         </div>
                     </div>
                 </div>
-                <div class="col-sm-4">
+                <div class="col-sm-4 wordpress mb-3">
                     <div class="hovereffect shadow">
+                        <p class="tag">WordPress</p>
                         <img class="img-responsive" src="./assets/img/portfolio/specg.png" alt="" width="100%;">
                         <div class="overlay bg-second text-center">
-                            <h2><a href="https://specgconstruction.com/" style="text-decoration: none;color: white;">Spec G Construction</a></h2>
+                            <h5><a href="https://specgconstruction.com/" style="text-decoration: none;color: white;">Spec G Construction</a></h5>
+                        </div>
+                    </div>
+                </div>
+                <!-- Intermax -->
+                <div class="col-sm-4 wordpress mb-3">
+                    <div class="hovereffect shadow">
+                        <p class="tag">WordPress</p>
+                        <img class="img-responsive" src="./assets/img/portfolio/intermax_home.png" alt="" width="100%;">
+                        <div class="overlay bg-second text-center">
+                            <h5><a href="https://www.intermax.com.au/" style="text-decoration: none;color: white;">Intermax</a></h5>
+                        </div>
+                    </div>
+                </div>
+                <!-- Mode Group -->
+                <div class="col-sm-4 wordpress mb-3">
+                    <div class="hovereffect shadow">
+                        <p class="tag">WordPress</p>
+                        <img class="img-responsive" src="./assets/img/portfolio/modegroup_home.png" alt="" width="100%;">
+                        <div class="overlay bg-second text-center">
+                            <h5><a href="https://www.modegroup.com.au/" style="text-decoration: none;color: white;">Mode Group</a></h5>
+                        </div>
+                    </div>
+                </div>
+                <!-- Suicide Program -->
+                <div class="col-sm-4 wordpress mb-3">
+                    <div class="hovereffect shadow">
+                        <p class="tag">WordPress</p>
+                        <img class="img-responsive" src="./assets/img/portfolio/suicide_home.png" alt="" width="100%;">
+                        <div class="overlay bg-second text-center">
+                            <h5><a href="https://www.suicideprograms.com.au/" style="text-decoration: none;color: white;">Suicide Program</a></h5>
+                        </div>
+                    </div>
+                </div>
+                <!-- Team Kids -->
+                <div class="col-sm-4 wordpress mb-3">
+                    <div class="hovereffect shadow">
+                        <p class="tag">WordPress</p>
+                        <img class="img-responsive" src="./assets/img/portfolio/teamkids_home.png" alt="" width="100%;">
+                        <div class="overlay bg-second text-center">
+                            <h5><a href="https://www.teamkids.com.au/" style="text-decoration: none;color: white;">Team Kids</a></h5>
+                        </div>
+                    </div>
+                </div>
+                <!-- Danterr -->
+                <div class="col-sm-4 wordpress mb-3">
+                    <div class="hovereffect shadow">
+                        <p class="tag">WordPress</p>
+                        <img class="img-responsive" src="./assets/img/portfolio/danterr_home.png" alt="" width="100%;">
+                        <div class="overlay bg-second text-center">
+                            <h5><a href="https://www.danterr.com/" style="text-decoration: none;color: white;">Danterr</a></h5>
+                        </div>
+                    </div>
+                </div>
+                <!-- Health Care 2 You -->
+                <div class="col-sm-4 wordpress mb-3">
+                    <div class="hovereffect shadow">
+                        <p class="tag">WordPress</p>
+                        <img class="img-responsive" src="./assets/img/portfolio/healthcare2you_home.png" alt="" width="100%;">
+                        <div class="overlay bg-second text-center">
+                            <h5><a href="https://www.healthcare2you.com.au/" style="text-decoration: none;color: white;">Health Care 2 You</a></h5>
+                        </div>
+                    </div>
+                </div>
+                <!-- Sticky Rice Cooking Class -->
+                <div class="col-sm-4 laravel mb-3">
+                    <div class="hovereffect shadow">
+                        <p class="tag">Laravel</p>
+                        <img class="img-responsive" src="./assets/img/portfolio/stickyrice_home.png" alt="" width="100%;">
+                        <div class="overlay bg-second text-center">
+                            <h5><a href="https://book.stickyricecookingschool.com.au/" style="text-decoration: none;color: white;">Sticky Rice Cooking School</a></h5>
                         </div>
                     </div>
                 </div>
@@ -411,5 +517,20 @@
     
     </footer>
     <!-- Footer -->
+    <!-- Script -->
+    <script>
+        $(document).ready(function(){
+            $('#wordpress').on('click', function(){
+                $('.wordpress').toggle("slow",function(){
+
+                });
+            });
+            $('#laravel').on('click', function(){
+                $('.laravel').toggle("slow",function(){
+                    
+                });
+            });
+        })
+    </script>
 </body>
 </html>
